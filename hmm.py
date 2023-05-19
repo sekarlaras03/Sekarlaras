@@ -41,29 +41,26 @@ def penjelasan_Rumus():
         5. V adalah volume sampel (mL)"""
 )
 def masukkan_dan_pengolahan_data():
-    st.header(":green[Perhitungan COD]")
-    st.subheader("Kalkulator Perhitungan COD")
+    st.header("kalkulator kadar COD")
 
-    # Masukkan Data
-    st.subheader("Masukkan Data!")
-    st.write("Masukkan nilai untuk menghitung Kadar COD")
-
-# Tampilkan input from
-volume_blanko = st.number_input("Masukkan volume blanko (mL)", 0.00)
-volume_pereaksi = st.number_input("Masukkan volume pereaksi (mL)", 0.00)
-normalitas = st.number_input("Masukkan nilai normalitas (grek/mL)", 0.000)
-berat_ekivalen_oksigen = st.number_input(
+    # Tampilkan input from
+    volume_blanko = st.number_input("Masukkan volume blanko (mL)", 0.00)
+    volume_pereaksi = st.number_input("Masukkan volume pereaksi (mL)", 0.00)
+    normalitas = st.number_input("Masukkan nilai normalitas (grek/mL)", 0.000)
+    berat_ekivalen_oksigen = st.number_input(
     "Masukkan berat ekivalen oksigen (grek) (Tetapan dalam SNI 8000 grek)", 8000)
-volume_sampel = st.number_input("Masukkan nilai volume sampel (mL)", 0.00)
-if volume_sampel != 0:
-    cod = (
+    volume_sampel = st.number_input("Masukkan nilai volume sampel (mL)", 0.00)
+    if volume_sampel != 0:
+       cod = (
         (volume_blanko - volume_pereaksi)
         * normalitas
         * berat_ekivalen_oksigen
         / volume_sampel
-if st. button ("HITUNG KADAR COD"):
-    hasil_cod = hitung_cod (volume_blanko,volume_pereaksi, normalitas, berat_ekivalen_oksigen,volume_sampel)
-    st.success(f"kadar cod:{hasil_cod}")
+
+    # tampilkan tombol untuk menghitung kadar COD
+    if st. button ("HITUNG KADAR COD"):
+       hasil_cod = hitung_cod (volume_blanko,volume_pereaksi, normalitas, berat_ekivalen_oksigen,volume_sampel)
+       st.success(f"kadar cod:{hasil_cod}")
 )
 def penjelasan_materi():
     st.title("Pengertian COD")
