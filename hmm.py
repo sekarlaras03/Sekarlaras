@@ -71,7 +71,7 @@ def penjelasan_materi():
         4. Badan air (untuk mengetahui nilai COD dan dapat memperkirakan dampak yang ditimbulkan)
     """
 if _name_ == '_main_':
-    main()
+    main()
  
 
 
