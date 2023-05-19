@@ -60,7 +60,6 @@ if volume_sampel != 0:
         * normalitas
         * berat_ekivalen_oksigen
         / volume_sampel
-    st.success(f"Kadar COD adalah {cod:.2f} mg/L")
 st.button("HITUNG")():
 )
 def penjelasan_materi():
