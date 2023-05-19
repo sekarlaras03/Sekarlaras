@@ -48,6 +48,7 @@ def masukkan_dan_pengolahan_data():
     st.subheader("Masukkan Data!")
     st.write("Masukkan nilai untuk menghitung Kadar COD")
 
+# Tampilkan input from
 volume_blanko = st.number_input("Masukkan volume blanko (mL)", 0.00)
 volume_pereaksi = st.number_input("Masukkan volume pereaksi (mL)", 0.00)
 normalitas = st.number_input("Masukkan nilai normalitas (grek/mL)", 0.000)
@@ -60,7 +61,9 @@ if volume_sampel != 0:
         * normalitas
         * berat_ekivalen_oksigen
         / volume_sampel
-st.button("HITUNG")():
+if st. button ("HITUNG KADAR COD")():
+    hasil_cod = hitung_cod (volume_blanko,volume_pereaksi, normalitas, berat_ekivalen_oksigen,volume_sampel)
+    st.success(f"kadar cod:{hasil_cod}")
 )
 def penjelasan_materi():
     st.title("Pengertian COD")
