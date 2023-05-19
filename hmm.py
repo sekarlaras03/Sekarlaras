@@ -14,7 +14,7 @@ def main():
     elif task == "Rumus":
         penjelasan_Rumus()
     elif task == "Kalkulator Perhitungan COD":
-        masukkan_dan_pengolahan_data()
+        hitung_cod()
         
 def Welcome_to_webapps():
     st.title("Selamat Datang di Website Kami")
@@ -40,8 +40,8 @@ def penjelasan_Rumus():
         4. F adalah berat ekivalen menggunakan tetapan SNI yaitu 8000 grek
         5. V adalah volume sampel (mL)"""
 )
-def masukkan_dan_pengolahan_data():
-    st.header("kalkulator kadar COD")
+def hitung_cod(volume_blanko,volume_pereaksi,normalitas,berat_ekivalen_oksigen,volume_sampel):
+    hasil = (volume_blanko,volume_pereaksi) * normalitas * berat_ekivalen_oksigen / volume_sampel
 
     # Tampilkan input from
     volume_blanko = st.number_input("Masukkan volume blanko (mL)", 0.00)
@@ -50,18 +50,12 @@ def masukkan_dan_pengolahan_data():
     berat_ekivalen_oksigen = st.number_input(
     "Masukkan berat ekivalen oksigen (grek) (Tetapan dalam SNI 8000 grek)", 8000)
     volume_sampel = st.number_input("Masukkan nilai volume sampel (mL)", 0.00)
-    if volume_sampel != 0:
-       cod = (
-        (volume_blanko - volume_pereaksi)
-        * normalitas
-        * berat_ekivalen_oksigen
-        / volume_sampel
-
+    
     # tampilkan tombol untuk menghitung kadar COD
     if st. button ("HITUNG KADAR COD"):
        hasil_cod = hitung_cod (volume_blanko,volume_pereaksi, normalitas, berat_ekivalen_oksigen,volume_sampel)
        st.success(f"kadar cod:{hasil_cod}")
-)
+
 def penjelasan_materi():
     st.title("Pengertian COD")
     st.header("Apa itu COD?")
