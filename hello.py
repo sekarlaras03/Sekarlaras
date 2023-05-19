@@ -30,6 +30,7 @@ def Welcome_to_webapps():
 def penjelasan_Rumus():
     st.title("Rumus Mencari Kadar COD Dalam Sampel")
     st.write("Berdasarkan kalkulator yang kami buat, berikut adalah rumus dari hasil yang didapat :")
+    st.write("rumus kadar COD= (A-B)*N*F/V)")
     st.write("Keterangan:")
     st.write("1. A adalah volume blanko (mL)")
     st.write("2. B adalah volume pereaksi (mL)")
