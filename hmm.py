@@ -70,7 +70,3 @@ def penjelasan_materi():
         3. Effluen air limbah ke badan air (untuk kesesuaian terhadap baku mutu)
         4. Badan air (untuk mengetahui nilai COD dan dapat memperkirakan dampak yang ditimbulkan)
     """
-
- 
-
-
