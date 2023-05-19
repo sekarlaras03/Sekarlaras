@@ -61,7 +61,7 @@ if volume_sampel != 0:
         * normalitas
         * berat_ekivalen_oksigen
         / volume_sampel
-if st. button ("HITUNG KADAR COD")():
+if st. button ("HITUNG KADAR COD"):
     hasil_cod = hitung_cod (volume_blanko,volume_pereaksi, normalitas, berat_ekivalen_oksigen,volume_sampel)
     st.success(f"kadar cod:{hasil_cod}")
 )
