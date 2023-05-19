@@ -14,20 +14,6 @@ selected = option_menu(
         "nav-link": {
             "font-size": "20px",
             "text-align": "left",
-if selected == "Home":
-    st.title("Selamat Datang di Website Kami")
-    st.header("KELOMPOK 5")
-    st.image("lab.png")
-    daftar_nama = [
-        "Agnia Zahara (2230424)",
-        "Arya Dhemas Pambudhi (2230435)",
-        "Ghaniyyu Halmar Indrahani (2230442)",
-        "Karira Anindya (2230447)",
-        "Sekar Laras (2230470)",
-    ]
-    cols = st.columns(len(daftar_nama))
-    for i, col in enumerate(cols):
-        col.write(daftar_nama[i])
 
 if selected == "Pengertian":
     st.title("Pengertian COD")
